@@ -1,13 +1,11 @@
 A basic calendar with flask and fullcalendar.io
 
 
-To run:
+## To run:
 ------
-- virtuanenv env
-- source env/bin/activate
-- pip install -r requirements.txt
-- python flaskcalendar/main.py
+1. Make sure you have flask installed
+2. `git clone https://github.com/yingchi/flask-fullcalendar.git`
+3. `cd flask-fullcalendar`
+4. python flaskcalendar/main.py
 
 
-Thanks to:
-* [Nikola-K](https://github.com/Nikola-K)
