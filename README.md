@@ -1,5 +1,5 @@
-A basic calendar with flask and fullcalendar.io
-
+A basic calendar with flask and fullcalendar.io  
+Adapted from the work of [Kkarimi](https://github.com/kkarimi)
 
 ## To run:
 1. Make sure you have flask installed
