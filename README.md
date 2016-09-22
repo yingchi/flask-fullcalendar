@@ -2,7 +2,6 @@ A basic calendar with flask and fullcalendar.io
 
 
 ## To run:
-------
 1. Make sure you have flask installed
 2. `git clone https://github.com/yingchi/flask-fullcalendar.git`
 3. `cd flask-fullcalendar`
