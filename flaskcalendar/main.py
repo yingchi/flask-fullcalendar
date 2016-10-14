@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def calendar():
-    return render_template("json.html")
+    return render_template("index.html")
 
 
 @app.route('/data')
