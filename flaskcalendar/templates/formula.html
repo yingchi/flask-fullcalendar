@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<link rel="stylesheet" href="default.css">
+	<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />
+	<link href="{{ url_for('static', filename='fullcalendar.print.css') }}" rel='stylesheet' media='print' />
+	<script src="{{ url_for('static', filename='lib/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='fullcalendar.min.js') }}"></script>
+	<script>
+
+		$(document).ready(function() {
+
+			$('#calendar').fullCalendar({
+				header: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: {
+					url: 'data',
+					error: function() {
+						$('#script-warning').show();
+					}
+				},
+				loading: function(bool) {
+					$('#loading').toggle(bool);
+				}
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id='wrap'>
+
+        <div id='menu'>
+            <div id='menu-buttons'>
+                <button id="myButton" class="menu-button" >Calendar</button>
+				<script type="text/javascript">
+				    document.getElementById("myButton").onclick = function () {
+				        location.href = "www.yoursite.com";
+				    };
+				</script>
+            </div>
+            <p>
+                <input type='checkbox' id='drop-remove'  checked='checked'/>
+                <label for='drop-remove'>remove after drop</label>
+            </p>
+        </div>
+
+        <div id="formula">
+        	<center><h1>Extrapolation Factor Calendar</h1></center>
+    	</div>
+		
+
+    </div>
+	
+</body>
+</html>
