@@ -11,6 +11,11 @@ def calendar():
     return render_template("index.html")
 
 
+@app.route('/formula')
+def formula():
+    return render_template("formula.html")
+
+
 @app.route('/data')
 def return_data():
     start_date = request.args.get('start', '')
@@ -20,7 +25,7 @@ def return_data():
     # but since no db or any real storage is implemented I'm just
     # returning data from a text file that contains json elements
 
-    with open("flaskcalendar/dailyExtrapolationFactor.json", "r") as input_data:
+    with open("dailyExtrapolationFactor.json", "r") as input_data:
         # you should use something else here than just plaintext
         # check out jsonfiy method or the built in json module
         # http://flask.pocoo.org/docs/0.10/api/#module-flask.json

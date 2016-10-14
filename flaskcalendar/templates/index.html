@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset='utf-8' />
-	<link rel="stylesheet" href="default.css">
 	<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />
+	<link href="{{ url_for('static', filename='style.css') }}" rel='stylesheet' />
 	<link href="{{ url_for('static', filename='fullcalendar.print.css') }}" rel='stylesheet' media='print' />
+	<link href="{{ url_for('static', filename='fullcalendar.custom.css') }}" rel='stylesheet' />
 	<script src="{{ url_for('static', filename='lib/moment.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='fullcalendar.min.js') }}"></script>
@@ -26,6 +27,7 @@
 						$('#script-warning').show();
 					}
 				},
+				eventColor: '#2b90d9',
 				loading: function(bool) {
 					$('#loading').toggle(bool);
 				}
@@ -39,22 +41,24 @@
 	<div id='wrap'>
 
         <div id='menu'>
-            <div id='menu-buttons'>
-                <button id="myButton" class="menu-button" >Calendar</button>
+        	<div class='button-container'>
+	        	<div id='calendarButton' class='button -blue center'>Calendar</div>
 				<script type="text/javascript">
-				    document.getElementById("myButton").onclick = function () {
-				        location.href = "index.html";
+				    document.getElementById("calendarButton").onclick = function () {
+				        location.href = "/";
 				    };
 				</script>
-            </div>
-            <p>
-                <input type='checkbox' id='drop-remove'  checked='checked'/>
-                <label for='drop-remove'>remove after drop</label>
-            </p>
+				<div id='formulaButton' class='button -blue center'>Formula</div>
+				<script type="text/javascript">
+				    document.getElementById("formulaButton").onclick = function () {
+				        location.href = "/formula";
+				    };
+				</script>
+			</div>
         </div>
 
         <div id="header">
-        	<center><h1>Extrapolation Factor Calendar</h1></center>
+        	<h1>Extrapolation Factor Calendar</h1>
     	</div>
 		<div id='script-warning'>
 			Error getting data from <code>/data</code> endpoint.

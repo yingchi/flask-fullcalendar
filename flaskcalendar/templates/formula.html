@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset='utf-8' />
-	<link rel="stylesheet" href="default.css">
 	<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />
+	<link href="{{ url_for('static', filename='style.css') }}" rel='stylesheet' />
 	<link href="{{ url_for('static', filename='fullcalendar.print.css') }}" rel='stylesheet' media='print' />
+	<link href="{{ url_for('static', filename='fullcalendar.custom.css') }}" rel='stylesheet' />
 	<script src="{{ url_for('static', filename='lib/moment.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='fullcalendar.min.js') }}"></script>
@@ -39,22 +40,27 @@
 	<div id='wrap'>
 
         <div id='menu'>
-            <div id='menu-buttons'>
-                <button id="myButton" class="menu-button" >Calendar</button>
+        	<div class='button-container'>
+	        	<div id='calendarButton' class='button -blue center'>Calendar</div>
 				<script type="text/javascript">
-				    document.getElementById("myButton").onclick = function () {
-				        location.href = "www.yoursite.com";
+				    document.getElementById("calendarButton").onclick = function () {
+				        location.href = "/";
 				    };
 				</script>
-            </div>
-            <p>
-                <input type='checkbox' id='drop-remove'  checked='checked'/>
-                <label for='drop-remove'>remove after drop</label>
-            </p>
+				<div id='formulaButton' class='button -blue center'>Formula</div>
+				<script type="text/javascript">
+				    document.getElementById("formulaButton").onclick = function () {
+				        location.href = "/formula";
+				    };
+				</script>
+			</div>
         </div>
 
-        <div id="formula">
-        	<center><h1>Extrapolation Factor Calendar</h1></center>
+        <div id="header">
+        	<h1>Formulas Here</h1>
+    	</div>
+    	<div class='formula-box'>
+    		<p> Here is the derivation...</p>
     	</div>
 		
 

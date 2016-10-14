@@ -1,0 +1,46 @@
+.fc-event{
+	position:relative;
+	display:block;
+	font-size:1.1em;
+	text-align: center;
+	line-height:1.8;
+	border-radius:3px;
+	border:1px solid #C6E5F3;
+	background-color:#C6E5F3;
+	font-weight:400
+}
+.fc-event,.fc-event:hover,.ui-widget .fc-event{
+	color:#fff;
+	text-decoration:none
+}
+.fc-event.fc-draggable,.fc-event[href]{
+	cursor:pointer
+}
+.fc-day-grid-event{margin:1px 2px 0;padding:0 1px}
+.fc-ltr .fc-day-grid-event.fc-not-start,.fc-rtl .fc-day-grid-event.fc-not-end{
+	margin-left:0;
+	border-left-width:0;
+	padding-left:1px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0
+}
+.fc-ltr .fc-day-grid-event.fc-not-end,.fc-rtl .fc-day-grid-event.fc-not-start{
+	margin-right:0;
+	border-right-width:0;
+	padding-right:1px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0
+}
+.fc-day-grid-event>.fc-content{
+	white-space:nowrap;overflow:hidden
+}
+.fc-day-grid-event .fc-time{font-weight:700}
+.fc-day-grid-event .fc-resizer{position:absolute;top:0;bottom:0;width:7px}
+.fc-ltr .fc-day-grid-event .fc-resizer{right:-3px;cursor:e-resize}
+.fc-rtl .fc-day-grid-event .fc-resizer{left:-3px;cursor:w-resize}
+a.fc-more{margin:1px 3px;font-size:.85em;cursor:pointer;text-decoration:none}
+a.fc-more:hover{text-decoration:underline}
+.fc-limited{display:none}
+.fc-day-grid .fc-row{z-index:1}
+.fc-more-popover{z-index:2;width:220px}
+.fc-more-popover .fc-event-container{padding:10px}
